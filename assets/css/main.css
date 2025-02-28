@@ -2330,83 +2330,18 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-top: 5px;
 }
 
-/* Logo Responsiveness */
-.navbar-brand img {
-  width: 75%;
-  max-width: 200px; /* Prevent logo from getting too large */
-  height: auto;
-}
 
-@media (max-width: 768px) {
-  .navbar-brand img {
-    width: 60%; /* Slightly smaller on mobile */
-    max-width: 150px;
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .carousel-caption .college-name {
+    font-size: 2.2rem;
+  }
+  
+  .carousel-caption .event-name {
+    font-size: 2.7rem;
   }
 }
 
-/* Hero Section Responsiveness */
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: auto;
-  padding: 0 15px;
-}
-
-.carousel-caption .college-name {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.carousel-caption .location,
-.carousel-caption .autonomous,
-.carousel-caption .presents {
-  font-size: 1.5rem;
-  margin: 5px 0;
-}
-
-.carousel-caption .event-name {
-  font-size: 3rem;
-  margin: 15px 0;
-}
-
-.carousel-caption .event-description {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* Event Timer Responsiveness */
-#clock {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 15px;
-}
-
-.time-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
-  color: #333;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  width: 80px;
-  height: 80px;
-  font-size: 1.5rem;
-}
-
-.time-label {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #666;
-  margin-top: 5px;
-}
-
-/* Media Queries for Different Screen Sizes */
 @media (max-width: 992px) {
   .carousel-caption .college-name {
     font-size: 2rem;
@@ -2415,56 +2350,67 @@ a.back-to-top:hover, a.back-to-top:focus {
   .carousel-caption .location,
   .carousel-caption .autonomous,
   .carousel-caption .presents {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   
   .carousel-caption .event-name {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   
   .carousel-caption .event-description {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 45%;
-  }
-  
-  .carousel-caption .college-name {
-    font-size: 1.8rem;
-  }
-  
-  .carousel-caption .location,
-  .carousel-caption .autonomous,
-  .carousel-caption .presents {
-    font-size: 1rem;
-    margin: 3px 0;
-  }
-  
-  .carousel-caption .event-name {
-    font-size: 2rem;
-    margin: 10px 0;
-  }
-  
-  .carousel-caption .event-description {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
   }
   
   .time-box {
     width: 70px;
     height: 70px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    max-width: 140px;
+  }
+  
+  .img-fluid.image-logo {
+    display: none;
+  }
+  
+  .carousel-caption {
+    top: 45%;
+  }
+  
+  .carousel-caption .college-name {
+    font-size: 0..8rem;
+  }
+  
+  .carousel-caption .location,
+  .carousel-caption .autonomous,
+  .carousel-caption .presents {
+    font-size: 0.7rem;
+  }
+  
+  .carousel-caption .event-name {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-caption .event-description {
+    font-size: 0.7rem;
+  }
+  
+  .time-box {
+    width: 60px;
+    height: 60px;
     font-size: 1.3rem;
+  }
+  
+  .time-label {
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 576px) {
-
-  .image-logo{
-    display: none;
-  }
   .carousel-caption {
     top: 40%;
   }
@@ -2476,46 +2422,29 @@ a.back-to-top:hover, a.back-to-top:focus {
   .carousel-caption .location,
   .carousel-caption .autonomous,
   .carousel-caption .presents {
-    font-size: 0.9rem;
-    margin: 2px 0;
+    font-size: 0.8rem;
   }
   
   .carousel-caption .event-name {
-    font-size: 1.7rem;
-    margin: 3px 0;
+    font-size: 1.8rem;
   }
   
   .carousel-caption .event-description {
     font-size: 0.8rem;
-    margin-bottom: 10px;
-  }
-  
-  .btn-common {
-    padding: 8px 16px;
-    font-size: 0.9rem;
   }
   
   .time-box {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     font-size: 1.1rem;
   }
   
   .time-label {
-    font-size: 0.7rem;
-  }
-  
-  /* Adjust countdown emoji size on mobile */
-  #clock div[style*="font-size: 30px"] {
-    font-size: 20px !important;
+    font-size: 0.6rem;
   }
 }
 
-/* Fix for very small screens */
 @media (max-width: 400px) {
-  .image-logo{
-    display: none;
-  }
   .carousel-caption {
     top: 35%;
   }
@@ -2527,27 +2456,41 @@ a.back-to-top:hover, a.back-to-top:focus {
   .carousel-caption .location,
   .carousel-caption .autonomous,
   .carousel-caption .presents {
-    font-size: 0.8rem;
-    margin: 2px 0;
+    font-size: 0.7rem;
   }
   
   .carousel-caption .event-name {
     font-size: 1.5rem;
-    margin: 5px 0;
   }
   
   .carousel-caption .event-description {
     font-size: 0.7rem;
-    margin-bottom: 8px;
   }
   
   .time-box {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     font-size: 1rem;
   }
-  
-  .time-label {
-    font-size: 0.6rem;
+}
+
+/* Hide logos on mobile */
+@media (max-width: 768px) {
+  .navbar-brand img,
+  .img-fluid.image-logo {
+    display: none;
   }
+}
+
+/* Show logos on large screens */
+@media (min-width: 769px) {
+  .navbar-brand img,
+  .img-fluid.image-logo {
+    display: inline-block;
+  }
+}
+
+.secondimae{
+  height: 600px;
+  width: 300px;
 }
