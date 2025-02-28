@@ -2492,11 +2492,11 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .secondimae{
   height: 600px;
-  width: 300px;
+  width: 500px;
 }
 
 @media (max-width: 700px) {
   .carousel-caption {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
