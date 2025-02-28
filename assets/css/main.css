@@ -2494,3 +2494,9 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 600px;
   width: 300px;
 }
+
+@media (max-width: 700px) {
+  .carousel-caption {
+    margin-top: 50px;
+  }
+}
