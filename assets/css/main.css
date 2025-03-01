@@ -2319,9 +2319,8 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-weight: bold;
   font-style: italic;
   width: 120px;
-  height: 190px;
+  height: 150px;
   border-radius: 25px;
-  padding: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
