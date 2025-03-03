@@ -23,6 +23,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
     <style>
+      /* Event Carousels Wrapper */
+      .event-carousels-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    
+      /* Event Type Title */
+      .event-type-title {
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+    
       /* Carousel styling with improved mobile responsiveness */
       .event-carousel {
         margin-bottom: 60px; /* Space for indicators */
@@ -118,6 +130,20 @@
       }
       
       /* Mobile responsiveness */
+      @media (max-width: 991px) {
+        .event-carousels-wrapper {
+          flex-direction: column;
+        }
+        
+        .event-carousel {
+          margin-bottom: 40px;
+        }
+        
+        .event-type-title {
+          margin-top: 20px;
+        }
+      }
+      
       @media (max-width: 768px) {
         .event-carousel .about-item {
           max-width: 95%;
@@ -171,7 +197,7 @@
       }
     </style>
 
-    
+
   </head>
   <body>
 
@@ -188,7 +214,7 @@
               <span class="icon-menu"></span>
               <span class="icon-menu"></span>
             </button>
-            <a href="index.html" class="navbar-brand image-logo"><img src="assets/img/logo.png" alt=""></a>
+            <a href="index.html" class="navbar-brand image-logo"><img src="assets/img/logo.png" style="width: 110px;" alt=""></a>
           </div>
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
@@ -225,7 +251,7 @@
               </li>
             </ul>
           </div>
-          <img class="img-fluid image-logo" src="assets/img/image.png" alt="">
+          <img class="img-fluid image-logo" style="width: 120px;" src="assets/img/image.png" alt="">
         </div>
 
         <!-- Mobile Menu Start -->
@@ -304,124 +330,122 @@
             <br><br><br><br><br><br><br>
             <div class="section-title-header text-center">
               <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Events</h1>
-              <h5 class="wow fadeInDown" data-wow-delay="0.2s">Tech Events</h5>
             </div>
           </div>
         </div>
         
-        <!-- Tech Events Carousel -->
-        <div id="techEventsCarousel" class="carousel slide event-carousel" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="about-item">
-                <img class="img-fluid" src="assets/img//iloveimg-resized (1)/paper.jpg" alt="">
-                <div class="about-text text-center">
-                  <h3><a href="#">Paper Presentation</a></h3>
-                  <p>Team - Size : 2 - 3 members</p>
-                  <p>"Draft! Discuss! Deliver!"</p>
-                  <p>Co-ordinators : Guna D - 6369917195</p>
+        <div class="row event-carousels-wrapper">
+          <!-- Tech Events Carousel -->
+          <div class="col-12 col-lg-6">
+            <h5 class="event-type-title text-center wow fadeInDown" data-wow-delay="0.2s">Tech Events</h5>
+            <div id="techEventsCarousel" class="carousel slide event-carousel" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="about-item">
+                    <img class="img-fluid" src="assets/img//iloveimg-resized (1)/paper.jpg" alt="">
+                    <div class="about-text text-center">
+                      <h3><a href="#">Paper Presentation</a></h3>
+                      <p>Team - Size : 2 - 3 members</p>
+                      <p>"Draft! Discuss! Deliver!"</p>
+                      <p>Co-ordinators : Guna D - 6369917195</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="about-item">
+                    <img class="img-fluid" src="assets/img//iloveimg-resized (1)/coding.jpg" alt="">
+                    <div class="about-text text-center">
+                      <h3><a href="#">Coding - Fix & Flip</a></h3>
+                      <p>Individual participation</p>
+                      <p>Round 1 - Debugging</p><p>Round 2 - Reverse Coding</p>
+                      <p>Co-ordinators: Sabarish - 8438678326</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="about-item">
+                    <img class="img-fluid" src="assets/img//iloveimg-resized (1)/web.jpg" alt="">
+                    <div class="about-text text-center">
+                      <h3><a href="#">Pixel Craft</a></h3>
+                      <p>Individual Participation</p>
+                      <p>"Code! Design! Innovate!"</p>
+                      <p>Craft stunning UI where pixel meets perfection</p>
+                      <p>Co-ordinators: Nisar A - 9787795213</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="about-item">
-                <img class="img-fluid" src="assets/img//iloveimg-resized (1)/coding.jpeg" alt="">
-                <div class="about-text text-center">
-                  <h3><a href="#">Coding - Fix & Flip</a></h3>
-                  <p>Individual participation</p>
-                  <p>Round 1 - Debugging</p><p>Round 2 - Reverse Coding</p>
-                  <p>Co-ordinators: Sabarish - 8438678326</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="about-item">
-                <img class="img-fluid" src="assets/img//iloveimg-resized (1)/web.jpeg" alt="">
-                <div class="about-text text-center">
-                  <h3><a href="#">Pixel Craft</a></h3>
-                  <p>Individual Participation</p>
-                  <p>"Code! Design! Innovate!"</p>
-                  <p>Craft stunning UI where pixel meets perfection</p>
-                  <p>Co-ordinators: Nisar A - 9787795213</p>
-                </div>
-              </div>
+              <a class="carousel-control-prev" href="#techEventsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#techEventsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              <ol class="carousel-indicators">
+                <li data-target="#techEventsCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#techEventsCarousel" data-slide-to="1"></li>
+                <li data-target="#techEventsCarousel" data-slide-to="2"></li>
+              </ol>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#techEventsCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#techEventsCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <ol class="carousel-indicators">
-            <li data-target="#techEventsCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#techEventsCarousel" data-slide-to="1"></li>
-            <li data-target="#techEventsCarousel" data-slide-to="2"></li>
-          </ol>
-        </div>
     
-        <br><br><br> <!-- Added extra space to prevent overlap -->
-        <div class="row mt-5 pt-4"> <!-- Added margin and padding to create more space -->
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h5 class="wow fadeInDown" data-wow-delay="0.2s">Non-Tech Events</h5>
+          <!-- Non-Tech Events Carousel -->
+          <div class="col-12 col-lg-6">
+            <h5 class="event-type-title text-center wow fadeInDown" data-wow-delay="0.2s">Non-Tech Events</h5>
+            <div id="nonTechEventsCarousel" class="carousel slide event-carousel" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="about-item">
+                    <img class="img-fluid" src="assets/img//iloveimg-resized (1)/mind.jpg" alt="">
+                    <div class="about-text text-center">
+                      <h3><a href="#">Mind Clash</a></h3>
+                      <p>Individual Participation</p>
+                      <p>About - Innovate, and defend your tech perspective! (Tech Debate)</p>
+                      <p>Co-ordinators: Hansiga P - 7538809125</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="about-item">
+                    <img class="img-fluid" src="assets/img//iloveimg-resized (1)/melo.jpg" alt="">
+                    <div class="about-text text-center">
+                      <h3><a href="#">Melophile</a></h3>
+                      <p>Individual Participation</p>
+                      <p>Number of rounds - 3</p>
+                      <p>About - Guess the next line after the song stops!</p>
+                      <p>Co-ordinators: Nisar S - 9787795213</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="about-item">
+                    <img class="img-fluid" src="assets/img//iloveimg-resized (1)/random.jpg" alt="">
+                    <div class="about-text text-center">
+                      <h3><a href="#">Random Ramble</a></h3>
+                      <p>Team Size - 2 per team</p>
+                      <p>About - One asks a question, the other should give an opposite or unrelated answer.</p>
+                      <p>Co-ordinators: Pooja - 9791887251</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#nonTechEventsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#nonTechEventsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              <ol class="carousel-indicators">
+                <li data-target="#nonTechEventsCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#nonTechEventsCarousel" data-slide-to="1"></li>
+                <li data-target="#nonTechEventsCarousel" data-slide-to="2"></li>
+              </ol>
             </div>
           </div>
-        </div>
-    
-        <!-- Non-Tech Events Carousel -->
-        <div id="nonTechEventsCarousel" class="carousel slide event-carousel" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="about-item">
-                <img class="img-fluid" src="assets/img//iloveimg-resized (1)/mind.jpeg" alt="">
-                <div class="about-text text-center">
-                  <h3><a href="#">Mind Clash</a></h3>
-                  <p>Individual Participation</p>
-                  <p>About - Innovate, and defend your tech perspective! (Tech Debate)</p>
-                  <p>Co-ordinators: Hansiga P - 7538809125</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="about-item">
-                <img class="img-fluid" src="assets/img//iloveimg-resized (1)/melo.jpeg" alt="">
-                <div class="about-text text-center">
-                  <h3><a href="#">Melophile</a></h3>
-                  <p>Individual Participation</p>
-                  <p>Number of rounds - 3</p>
-                  <p>About - Guess the next line after the song stops!</p>
-                  <p>Co-ordinators: Nisar S - 9787795213</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="about-item">
-                <img class="img-fluid" src="assets/img//iloveimg-resized (1)/random.jpeg" alt="">
-                <div class="about-text text-center">
-                  <h3><a href="#">Random Ramble</a></h3>
-                  <p>Team Size - 2 per team</p>
-                  <p>About - One asks a question, the other should give an opposite or unrelated answer.</p>
-                  <p>Co-ordinators: Pooja - 9791887251</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#nonTechEventsCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#nonTechEventsCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <ol class="carousel-indicators">
-            <li data-target="#nonTechEventsCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#nonTechEventsCarousel" data-slide-to="1"></li>
-            <li data-target="#nonTechEventsCarousel" data-slide-to="2"></li>
-          </ol>
         </div>
       </div>
     </section>
@@ -686,66 +710,66 @@ updateCountdown();
               `radial-gradient(circle at ${x}% ${y}%, pink 50%, blue 75%, orange 90%)`;
       });
   </script>
-    <script>
+  <script>
+    $(document).ready(function() {
       // Initialize both carousels with 3-second interval and enhanced transitions
-      $(document).ready(function() {
-        $('#techEventsCarousel, #nonTechEventsCarousel').carousel({
-          interval: 3000,
-          pause: 'hover'
-        });
-        
-        // Add fade effect to carousel items during transition
-        $('.carousel').on('slide.bs.carousel', function(e) {
-          var $activeItem = $(this).find('.carousel-item.active');
-          var $nextItem = $(e.relatedTarget);
-          
-          // Apply custom animation
-          $activeItem.css({
-            'transform': 'scale(0.95)',
-            'opacity': '0.7'
-          });
-          
-          setTimeout(function() {
-            $activeItem.css({
-              'transform': 'scale(1)',
-              'opacity': '1'
-            });
-            $nextItem.css({
-              'transform': 'scale(1)',
-              'opacity': '1'
-            });
-          }, 600);
-        });
-        
-        // Ensure proper sizing on window resize
-        $(window).resize(function() {
-          adjustCarouselLayout();
-        });
-        
-        // Initial adjustment
-        adjustCarouselLayout();
-        
-        function adjustCarouselLayout() {
-          // Adjust for different screen sizes
-          if ($(window).width() < 768) {
-            // Mobile adjustments
-            $('.carousel-control-prev, .carousel-control-next').css('width', '10%');
-          } else {
-            // Desktop adjustments
-            $('.carousel-control-prev, .carousel-control-next').css('width', '8%');
-          }
-        }
-        
-        // Add hover effects for better interactivity
-        $('.about-item').hover(
-          function() {
-            $(this).find('h3 a').css('color', '#E91E63');
-          },
-          function() {
-            $(this).find('h3 a').css('color', '');
-          }
-        );
+      $('#techEventsCarousel, #nonTechEventsCarousel').carousel({
+        interval: 3000,
+        pause: 'hover'
       });
-    </script>
+      
+      // Add fade effect to carousel items during transition
+      $('.carousel').on('slide.bs.carousel', function(e) {
+        var $activeItem = $(this).find('.carousel-item.active');
+        var $nextItem = $(e.relatedTarget);
+        
+        // Apply custom animation
+        $activeItem.css({
+          'transform': 'scale(0.95)',
+          'opacity': '0.7'
+        });
+        
+        setTimeout(function() {
+          $activeItem.css({
+            'transform': 'scale(1)',
+            'opacity': '1'
+          });
+          $nextItem.css({
+            'transform': 'scale(1)',
+            'opacity': '1'
+          });
+        }, 600);
+      });
+      
+      // Ensure proper sizing on window resize
+      $(window).resize(function() {
+        adjustCarouselLayout();
+      });
+      
+      // Initial adjustment
+      adjustCarouselLayout();
+      
+      function adjustCarouselLayout() {
+        // Adjust for different screen sizes
+        if ($(window).width() < 768) {
+          // Mobile adjustments
+          $('.carousel-control-prev, .carousel-control-next').css('width', '10%');
+        } else {
+          // Desktop adjustments
+          $('.carousel-control-prev, .carousel-control-next').css('width', '8%');
+        }
+      }
+      
+      // Add hover effects for better interactivity
+      $('.about-item').hover(
+        function() {
+          $(this).find('h3 a').css('color', '#E91E63');
+        },
+        function() {
+          $(this).find('h3 a').css('color', '');
+        }
+      );
+    });
+  </script>
   </body>
 </html>

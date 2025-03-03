@@ -2435,8 +2435,8 @@ a.back-to-top:hover, a.back-to-top:focus {
   }
   
   .time-box {
-    width: 50px;
-    height: 60px;
+    width: 60px;
+    height: 70px;
     font-size: 1.1rem;
   }
   
@@ -2469,8 +2469,8 @@ a.back-to-top:hover, a.back-to-top:focus {
   }
   
   .time-box {
-    width: 45px;
-    height: 55px;
+    width: 55px;
+    height: 65px;
     font-size: 1rem;
   }
 }
