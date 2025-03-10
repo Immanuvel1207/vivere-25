@@ -675,7 +675,7 @@ function updateCountdown() {
   const timeLeft = eventDate - now;
 
   if (timeLeft <= 0) {
-    document.getElementById("clock").innerHTML = "<h3>Event has started!</h3>";
+    document.getElementById("clock").innerHTML = "<h3 style='color: white;'>Event has ended!</h3>";
     return;
   }
 
